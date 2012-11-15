@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CTY Canon Listen</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="jquery-ui-1.8.22.custom.min.js"></script>
+        <script type="text/javascript" src="jquery.scrollTo-1.4.2-min.js"></script>
+        <script type="text/javascript" src="jquery.cookie.js"></script>
+        <script type="text/javascript" src="eventsource.js"></script>
+        <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="header">
+                <div id="header_inner">
+                    <span id="title">CTY Canon Listen<span id="event_title"></span></span>
+                    <div id="indicator">0 online</div>
+                </div>
+            </div>
+            <div id="main_wrapper">
+                <div id="main">
+                    <div id="left_wrapper">
+                        <div id="left">
+                            <div id="playlist_box" class="box">
+                                <div id="playlist" class="box_inner"></div>
+                            </div>
+                            <div id="video_box" class="box">
+                                <div id="player_blocker"></div>
+                                <div id="player"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="right_wrapper">
+                        <div id="right">
+                            <div id="users_box" class="box">
+                                <div id="users_box_inner">
+                                    <div id="users_box_title">Users currently online:</div>
+                                    <ul id="users_list"></ul>
+                                </div>
+                            </div>
+                            <div id="chat_box" class="box">
+                                <div id="chat_box_title">Chat:</div>
+                                <div id="chat_history">
+                                    <div id="chat_history_typing"></div>
+                                </div>
+                                <div id="chat_input">
+                                    <input id="chat_input_content" type="text" placeholder="Type here and press enter to chat" />
+                                </div>
+                            </div>
+                            <div id="lyrics_box" class="box"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

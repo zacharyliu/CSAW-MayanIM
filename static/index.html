@@ -1,0 +1,52 @@
+<html>
+<head>
+  <title>MayanIM</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <style>
+  a { color: black; text-decoration: underline; font-weight: bold; }
+  a:hover { text-decoration: none; }
+  #header { height: 50px; background: gray; }
+  #content { min-height: 500px; padding: 25px 0; }
+  #leftContent { min-height: 500px; width: 300px; border-right: 5px solid black; }
+  #rightContent { margin-left: 350px; margin-top: -502px; padding-right: 20px; min-height: 500px; }
+  #rightContent p { font-size: 22px; }
+  #footer { height: 40px; background: gray; padding-top: 20px; }
+  </style>
+  <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+  <script type="text/javascript" src="jquery-ui-1.8.22.custom.min.js"></script>
+  <script type="text/javascript" src="jquery.scrollTo-1.4.2-min.js"></script>
+  <script type="text/javascript" src="jquery.cookie.js"></script>
+  <script type="text/javascript" src="eventsource.js"></script>
+  <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+  <div id='header'>
+    <!--     <span style='float:right; color:white;margin-top:15px;margin-right:10px;'><a href='profiles.html'>Agent Profiles</a> | <a href='evidence/'>Evidence Locker</a> | <a href='resources.html'>Resources</a></span> -->
+    <span><h1 style='margin:0; padding: 10px;'>MayanIM</h1></span>
+  </div>
+  <div id='content'>
+    <div id='leftContent' class="yui-skin-sam">
+      <div id="users_box" class="box">
+        <div id="users_box_inner">
+          <h3>Members Online</h3>
+          <ul id="users_list"></ul>
+        </div>
+      </div>
+    </div>
+    <div id='rightContent'>
+      <div id="chat_box" class="box">
+        <div id="chat_history">
+          <div id="chat_history_typing"></div>
+        </div>
+        <div id="chat_input">
+          <input id="chat_input_content" type="text" placeholder="Type here and press enter to chat" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id='footer'>
+    <center> ISIS Cyber Crime Agency | CSAW 2012, High School Forensics Challenge </center>
+  </div>
+</body>
+</html>

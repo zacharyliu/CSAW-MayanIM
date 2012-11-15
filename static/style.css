@@ -1,0 +1,166 @@
+.box {
+    padding: 10px;
+}
+
+#users_box {
+/*    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 25%;*/
+}
+
+#users_box_inner {
+/*    position: absolute;
+    top: 10px;
+    bottom: 15px;
+    left: 10px;
+    right: 10px;*/
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+#users_box_title {
+    text-transform: uppercase;
+    font-size: 0.75em;
+    text-align: center;
+}
+
+#users_box ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 0 7px;
+}
+
+#users_box ul li {
+    font-size: 0.9em;
+    height: 1.3em;
+}
+
+#chat_box {
+/*    position: absolute;
+    top: 25%;
+    right: 0;
+    /*bottom: 100px;
+    bottom: 0;
+    left: 0;*/
+}
+
+#chat_box_title {
+    text-transform: uppercase;
+    font-size: 0.75em;
+    text-align: center;
+}
+
+#chat_history {
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    /*position: absolute;
+    top: 30px;
+    right: 10px;
+    bottom: 47px;
+    left: 10px;*/
+    padding: 5px;
+    font-size: 0.95em;
+    /*white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;*/
+    height: 450px;
+}
+
+.chat_history_item {
+    margin: 2px 0;
+    /*border-top: 1px solid #EEE;*/
+}
+
+.chat_history_item_name:after {
+    content: ': ';
+}
+
+.chat_history_item_server {
+    font-style: italic;
+}
+
+#chat_history_typing {
+    font-style: italic;
+    color: #555;
+    font-size: 0.9em;
+    /*text-align: right;*/
+    height: 20px;
+}
+
+#chat_input {
+    height: 30px;
+/*    position: absolute;
+    right: 10px;
+    bottom: 15px;
+    left: 10px;*/
+}
+
+#chat_input_content {
+    width: 600px;
+    padding: 3px;
+}
+.label {
+    font-size: 0.7em;
+    text-transform: uppercase;
+}
+
+.prompt_modal {
+    z-index: 99;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.prompt {
+    z-index: 100;
+    position: absolute;
+    background-color: #EEE;
+    box-shadow: 0 0 20px #CCC;
+    left: 50%;
+    width: 300px;
+    margin-left: -250px;
+    top: 50%;
+    height: 200px;
+    margin-top: -100px;
+    /*text-align: center;*/
+    border: 1px solid #aaa;
+    -moz-border-radius: 10px;
+    -moz-box-shadow: 0 0 10px #aaa;
+    -webkit-border-radius: 10px;
+    -webkit-box-shadow: 0 0 10px #aaa;
+    padding: 10px;
+}
+
+.prompt input[type=submit] {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.prompt_title {
+    /*font-size: 1.2em;
+    margin: 50px 10px;
+    height: 20px;*/
+    display: block;
+    font-size: 2em;
+    -webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+.prompt_input {
+    padding: 2px;
+    font-size: 16px;
+    line-height: 20px;
+    width: 250px;
+}
