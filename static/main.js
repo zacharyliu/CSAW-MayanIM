@@ -36,7 +36,8 @@ var ui = {
                 callback(ui.chat.name);
             }
         } else {
-            var prompt = new ui.prompt('Login Form', $.cookie('chat_name'));
+            //var prompt = new ui.prompt('Login Form', $.cookie('chat_name'));
+            var prompt = new ui.prompt('Login Form', '');
             prompt.onSubmit(function(name) {
                 ui.chat.name = name;
                 $.cookie('chat_name', name, {expires: 365});
@@ -356,7 +357,7 @@ var ui = {
         } else if (type == 'password') {
             var html = '<div class="prompt_modal"><div class="prompt"><div class="prompt_title"></div><input class="prompt_input" type="password"></input></div></div>';
         } else {
-            var html = '<div class="prompt_modal"><div class="prompt"><div class="prompt_title"></div><p><label for="username">Username: </label><input class="prompt_input" type="text"></input></p><p><input type="submit" id="login" name="login" /></p></div></div>';
+            var html = '<div class="prompt_modal"><div class="prompt"><div class="prompt_title"></div><p><label for="username">Username: </label><input class="prompt_input" type="text"></input></p><p><label for="password">Password: </label><input type="password" name="password" id="password" /></p><p><input type="submit" id="login" name="login" /></p></div></div>';
         }
         
         this.$ = $(html);
@@ -372,7 +373,7 @@ var ui = {
             });
         } else if (type != 'blocking') {
             // Attach event handler to input box
-            this.$.find('.prompt_input').keypress(function(e) {
+            var callback = function(e) {
                 // If the enter key was pressed:
                 if (e.which == 13) {
                     var data = $(this).attr('value');
@@ -380,7 +381,8 @@ var ui = {
                     this_class.$.remove();
                     callback(data);
                 }
-            });
+            }
+            this.$.find('.prompt input').keypress(callback);
         }
         
         this.onSubmit = function(newCallback) {
